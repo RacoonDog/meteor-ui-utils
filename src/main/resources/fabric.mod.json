@@ -1,27 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "meteor-ui-utils",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for the Meteor addons.",
+  "name": "Meteor UI Utils",
+  "description": "Meteorized dupe hunting mod, originally by FlorianMichael and Coderx-Gamer.",
   "authors": [
-    "seasnail"
+    "Crosby"
   ],
   "contact": {
-    "repo": "https://github.com/RacoonDog/meteor-addon-template",
-    "sources": "https://github.com/RacoonDog/meteor-addon-template",
-    "issues": "https://github.com/RacoonDog/meteor-addon-template/issues"
+    "repo": "https://github.com/RacoonDog/meteor-ui-utils",
+    "sources": "https://github.com/RacoonDog/meteor-ui-utils",
+    "issues": "https://github.com/RacoonDog/meteor-ui-utils/issues",
+    "discord": "https://discord.gg/4RBmBCFSTc"
   },
   "license": "LGPL-3.0",
-  "icon": "assets/template/icon.png",
+  "icon": "assets/meteor-ui-utils/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.AddonTemplate"
+      "io.github.racoondog.meteoruiutils.MeteorUIUTils"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "meteoruiutils.mixins.json"
   ],
   "custom": {
     "meteor-client:color": "225,25,25",

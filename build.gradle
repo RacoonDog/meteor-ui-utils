@@ -24,6 +24,13 @@ repositories {
             includeGroup "baritone"
         }
     }
+    maven {
+        name = "msau-repsy"
+        url = "https://repo.repsy.io/mvn/ggcrosby/meteorsharedaddonutils"
+        content {
+            includeGroup "io.github.racoondog"
+        }
+    }
 }
 
 dependencies {
@@ -31,6 +38,10 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "meteordevelopment:meteor-client:${project.meteor_version}"
+
+    modImplementation(include("io.github.racoondog:MeteorSharedAddonUtils:${project.msau_version}")) {
+        transitive = false
+    }
 }
 
 processResources {

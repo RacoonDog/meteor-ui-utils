@@ -1,23 +1,12 @@
 <div align="center">
   <!-- Logo and Title -->
-  <img src="/src/main/resources/assets/template/icon.png" alt="logo" width="30%"/>
-  <h1>Meteor Addon Template</h1>
-  <p>A template to allow easy usage of the Meteor Addon API.</p>
+  <img src="/src/main/resources/assets/meteor-ui-utils/icon.png" alt="logo" width="30%"/>
+  <h1>Meteor UI Utils</h1>
+  <p>Meteorized dupe hunting mod, originally by FlorianMichael and Coderx-Gamer.</p>
 
   <!-- Fancy badges -->
   <img src="https://img.shields.io/badge/Minecraft%20Version-1.19.4-blueviolet" alt="Minecraft Version">
-  <a href="https://github.com/RacoonDog/meteor-addon-template/commits/main"><img src="https://img.shields.io/github/last-commit/RacoonDog/meteor-addon-template?logo=github&color=blueviolet" alt="Last commit"></a>
+  <a href="https://github.com/RacoonDog/meteor-ui-utils/commits/main"><img src="https://img.shields.io/github/last-commit/RacoonDog/meteor-ui-utils?logo=github&color=blueviolet" alt="Last commit"></a>
+
+  <h1>W.I.P</h1>
 </div>
-
-# Resources
-For any questions about Meteor addon development:  
-
-<a href="https://discord.gg/4RBmBCFSTc"><img src="https://invidget.switchblade.xyz/4RBmBCFSTc" width="50%"></a>
-
-<a href="https://discord.gg/9mrRPGKYU3"><img src="https://invidget.switchblade.xyz/9mrRPGKYU3" width="50%"></a>
-
-# Commonly found errors
-
-## Resource not accessible by integration
-Go to your GitHub repository  
-Settings > Actions > General > Workflow Permissions > Check `Read and write permissions`
