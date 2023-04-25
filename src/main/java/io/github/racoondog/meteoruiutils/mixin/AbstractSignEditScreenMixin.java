@@ -1,7 +1,7 @@
 package io.github.racoondog.meteoruiutils.mixin;
 
 import io.github.racoondog.meteorsharedaddonutils.features.ScreenContainer;
-import io.github.racoondog.meteoruiutils.OverlayContainer;
+import io.github.racoondog.meteoruiutils.utils.OverlayContainer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.entity.SignBlockEntity;

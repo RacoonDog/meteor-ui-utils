@@ -1,12 +1,15 @@
 package io.github.racoondog.meteoruiutils;
 
 import com.mojang.logging.LogUtils;
+import io.github.racoondog.meteoruiutils.utils.OverlayContainer;
 import it.unimi.dsi.fastutil.Pair;
 import it.unimi.dsi.fastutil.objects.ObjectObjectImmutablePair;
 import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
+import meteordevelopment.meteorclient.gui.GuiTheme;
+import meteordevelopment.meteorclient.gui.widgets.containers.WContainer;
 import meteordevelopment.meteorclient.gui.widgets.pressable.WButton;
 import meteordevelopment.orbit.EventHandler;
 import net.fabricmc.api.EnvType;
@@ -62,7 +65,7 @@ public class MeteorUIUTils extends MeteorAddon {
             };
         });
 
-        List<Pair<Class<? extends Screen>, String>> screens = List.of( //todo link lectern
+        List<Pair<Class<? extends Screen>, String>> screens = List.of(
             new ObjectObjectImmutablePair<>(HandledScreen.class, "HandledScreen"),
             new ObjectObjectImmutablePair<>(LecternScreen.class, "Lectern")
         );
@@ -101,20 +104,23 @@ public class MeteorUIUTils extends MeteorAddon {
                 }
             };
 
-            //todo disable load when no saved state
-            WButton save = section.add(theme.button("Save")).expandX().widget();
-            save.action = () -> {
-                storedScreen = screen;
-                storedScreenHandler = mc.player.currentScreenHandler;
-            };
-
-            WButton load = section.add(theme.button("Load")).expandX().widget();
+            WButton load = theme.button("Load");
+            load.visible = false;
             load.action = () -> {
                 if (storedScreen != null && storedScreenHandler != null) {
                     mc.setScreen(storedScreen);
                     mc.player.currentScreenHandler = storedScreenHandler;
                 }
             };
+
+            WButton save = section.add(theme.button("Save")).expandX().widget();
+            save.action = () -> {
+                load.visible = true;
+                storedScreen = screen;
+                storedScreenHandler = mc.player.currentScreenHandler;
+            };
+
+            section.add(load).expandX();
 
             section.add(theme.label("Sync ID: " + mc.player.currentScreenHandler.syncId));
             WButton copySyncId = section.add(theme.button("Copy Sync ID")).expandX().widget();
@@ -128,10 +134,12 @@ public class MeteorUIUTils extends MeteorAddon {
                 mc.keyboard.setClipboard(String.valueOf(mc.player.currentScreenHandler.getRevision()));
             };
 
+            /*
             WButton fabricate = section.add(theme.button("Fabricate Packet")).expandX().widget();
             fabricate.action = () -> {
                 //todo make
             };
+             */
         });
     }
 

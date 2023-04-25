@@ -1,4 +1,4 @@
-package io.github.racoondog.meteoruiutils;
+package io.github.racoondog.meteoruiutils.utils;
 
 import io.github.racoondog.meteorsharedaddonutils.features.ScreenContainer;
 import it.unimi.dsi.fastutil.Pair;
