@@ -25,7 +25,7 @@
     "meteoruiutils.mixins.json"
   ],
   "custom": {
-    "meteor-client:color": "225,25,25",
+    "meteor-client:color": "102,150,227",
     "modmenu": {
       "badges": [ "meteor" ]
     }

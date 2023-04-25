@@ -3,6 +3,10 @@
   "package": "io.github.racoondog.meteoruiutils.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
+    "AbstractSignEditScreenMixin",
+    "HandledScreenMixin",
+    "LecternScreenMixin",
+    "SleepingChatScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
